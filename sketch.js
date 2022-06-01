@@ -8,8 +8,8 @@ var secAng;
 var minAng;
 var hourAng;
 var secCount;
-var minCount;
-var hourCount;
+int minCount;
+int hourCount;
 
 function setup() {
   createCanvas(500,500);
