@@ -7,9 +7,9 @@ var hy;
 var secAng;
 var minAng;
 var hourAng;
-int secCount;
-int minCount;
-int hourCount;
+var secCount;
+var minCount;
+var hourCount;
 
 function setup() {
   createCanvas(500,500);
@@ -76,13 +76,13 @@ function updateTime(){
   hourCount = hour();
 }
 
-var newX(int amplitude, int offset, var t){
+var newX(var amplitude, var offset, var t){
   var x = cos(radians(t));
   x = x*amplitude + offset;
   return x;
 }
 
-var newY(int amplitude, int offset, var t){
+var newY(var amplitude, var offset, var t){
   var y = sin(radians(t));
   y = y*amplitude + offset;
   return y;
