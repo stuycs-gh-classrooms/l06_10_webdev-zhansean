@@ -64,7 +64,7 @@ function clockFace(){
     nangle+=30;
     text(num+=1,hsx,hsy);
   } // Num Print
-  for (int i = 0; i < 60; i++){
+  for (var i = 0; i < 60; i++){
     line(width/2 + (r/2) * cos(radians(6 * i)),height/2 + (r/2) * sin(radians(6 * i)),(width/2 + ((r/2)-10) * cos(radians(6 * i))),height/2 + ((r/2)-10) * sin(radians(6 * i)));
   } //Ticks
   text(hour()+":"+minute()+":"+second(),width/2,height/2); //Digital Clock
