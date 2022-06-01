@@ -1,18 +1,18 @@
-float sx;
-float sy;
-float mx;
-float my;
-float hx;
-float hy;
-float secAng;
-float minAng;
-float hourAng;
-int secCount;
-int minCount;
-int hourCount;
+var sx;
+var sy;
+var mx;
+var my;
+var hx;
+var hy;
+var secAng;
+var minAng;
+var hourAng;
+var secCount;
+var minCount;
+var hourCount;
 
 function setup() {
-  size(500,500);
+  createCanvas(500,500);
   background(0,200,0);
   draw();
   clockFace();
@@ -24,14 +24,14 @@ function draw() {
   drawHand();
 }
 
-void timeToAngle(){
+function timeToAngle(){
   updateTime();
   secAng = (6*secCount)-90;
   minAng = (6*minCount)-90;
   hourAng = (30*hourCount)-90;
 }
 
-void drawHand(){
+function drawHand(){
   stroke(255,0,0);
   line(width/2,height/2,sx,sy); //Second
   stroke(0);
@@ -47,7 +47,7 @@ void drawHand(){
   hy = newY(100, height/2, hourAng);
 }
 
-void clockFace(){
+function clockFace(){
   int r = 400;
   float hsx;
   float hsy;
@@ -70,19 +70,19 @@ void clockFace(){
   text(hour()+":"+minute()+":"+second(),width/2,height/2); //Digital Clock
 }
 
-void updateTime(){
+function updateTime(){
   secCount = second();
   minCount = minute();
   hourCount = hour();
 }
 
-float newX(int amplitude, int offset, float t){
+var newX(int amplitude, int offset, float t){
   float x = cos(radians(t));
   x = x*amplitude + offset;
   return x;
 }
 
-float newY(int amplitude, int offset, float t){
+var newY(int amplitude, int offset, float t){
   float y = sin(radians(t));
   y = y*amplitude + offset;
   return y;
