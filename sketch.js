@@ -7,7 +7,7 @@ var hy;
 var secAng;
 var minAng;
 var hourAng;
-var secCount;
+int secCount;
 int minCount;
 int hourCount;
 
