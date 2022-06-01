@@ -49,10 +49,10 @@ function drawHand(){
 
 function clockFace(){
   int r = 400;
-  float hsx;
-  float hsy;
+  var hsx;
+  var hsy;
   int num = 0;
-  float nangle = 0;
+  var nangle = 0;
   background(0,200,0);
   fill(#C9ED54);
   circle(width/2,height/2,r);
@@ -77,13 +77,13 @@ function updateTime(){
 }
 
 var newX(int amplitude, int offset, float t){
-  float x = cos(radians(t));
+  var x = cos(radians(t));
   x = x*amplitude + offset;
   return x;
 }
 
 var newY(int amplitude, int offset, float t){
-  float y = sin(radians(t));
+  var y = sin(radians(t));
   y = y*amplitude + offset;
   return y;
 }
