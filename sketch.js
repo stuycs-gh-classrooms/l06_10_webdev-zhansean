@@ -48,10 +48,10 @@ function drawHand(){
 }
 
 function clockFace(){
-  int r = 400;
+  var r = 400;
   var hsx;
   var hsy;
-  int num = 0;
+  var num = 0;
   var nangle = 0;
   background(0,200,0);
   fill(#C9ED54);
