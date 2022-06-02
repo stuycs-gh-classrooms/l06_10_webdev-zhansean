@@ -9,8 +9,8 @@ var WHITE = 10;
 var GRAY = 11;
 var YELLOW = 12;
 var GREEN = 13;
-Grid grid;
-Keyboard keyboard;
+var Grid grid;
+var Keyboard keyboard;
 var allWords;
 var reasonableWords;
 var target;
@@ -20,13 +20,13 @@ function setup() {
   background(0x434242);
   createCanvas(500, 700);
 
-  grid = new Grid(width/2-145, 100, 50, 6, 5);
-  keyboard = new Keyboard();
+  var grid = new Grid(width/2-145, 100, 50, 6, 5);
+  var keyboard = new Keyboard();
   allWords = loadTable("words.csv");
   reasonableWords = loadTable("words_reasonable.csv");
   target = (reasonableWords.getString(0, int(random(reasonableWords.getColumnCount()))));
   target = target.toUpperCase();
-  println(target);
+  print(target);
 }
 
 function draw() {
@@ -121,9 +121,9 @@ class Ktile{
 }
 
 class Keyboard {
-  Ktile[] kb1;
-  Ktile[] kb2;
-  Ktile[] kb3;
+  var Ktile[] kb1;
+  var Ktile[] kb2;
+  var Ktile[] kb3;
   var x = 75;
   var tempx=x;
   var y = 500;
@@ -134,13 +134,13 @@ class Keyboard {
   var keyDict;
 
   function Keyboard() {
-    kb1 = new Ktile[10];
-    kb2 = new Ktile[9];
-    kb3 = new Ktile[7];
-    keyDict = new IntDict();
+    var kb1 = new Ktile[10];
+    var kb2 = new Ktile[9];
+    var kb3 = new Ktile[7];
+    var keyDict = new IntDict();
 
     for (var num=0; num < 10; num++) {
-      kb1[num] = new Ktile(tempx, y, key1, num);
+      var kb1[num] = new Ktile(tempx, y, key1, num);
       tempx+=35;
       keyDict.set(key1.substring(num, num+1), num);
     }
@@ -148,7 +148,7 @@ class Keyboard {
     tempx = x+35/2;
     y+=35;
     for (var num=0; num < 9; num++) {
-      kb2[num] = new Ktile(tempx, y, key2, num);
+      var kb2[num] = new Ktile(tempx, y, key2, num);
       tempx+=35;
       keyDict.set(key2.substring(num, num+1), num + 20);
     }
@@ -156,7 +156,7 @@ class Keyboard {
     tempx = x+35;
     y+=35;
     for (var num=0; num < 7; num++) {
-      kb3[num] = new Ktile(tempx, y, key3, num);
+      var kb3[num] = new Ktile(tempx, y, key3, num);
       tempx+=35;
       keyDict.set(key3.substring(num, num+1), num + 40);
     }
@@ -271,7 +271,7 @@ class Tile{
 class Grid {
   var x, y;
   var rows, cols;
-  Tile[][] tGrid;
+  var Tile[][] tGrid;
   var size;
   var curRow, curCol;
 
@@ -283,11 +283,11 @@ class Grid {
     rows = _rows;
     cols = _cols;
     size = _sz;
-    tGrid = new Tile[rows][cols];
+    var tGrid = new Tile[rows][cols];
 
     for (var r=0; r<rows; r++) {
       for (var c=0; c<cols; c++) {
-        tGrid[r][c] = new Tile(x+60*c, y+60*r);
+        var tGrid[r][c] = new Tile(x+60*c, y+60*r);
       }
     }
   }//constructor
