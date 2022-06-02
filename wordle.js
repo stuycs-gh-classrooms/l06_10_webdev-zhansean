@@ -9,8 +9,8 @@ var WHITE = 10;
 var GRAY = 11;
 var YELLOW = 12;
 var GREEN = 13;
-var Grid grid;
-var Keyboard keyboard;
+var grid;
+var keyboard;
 var allWords;
 var reasonableWords;
 var target;
@@ -121,7 +121,7 @@ class Ktile{
 }
 
 class Keyboard {
-  var Ktile[] kb1, kb2, kb3;
+  var kb1, kb2, kb3;
   var x = 75;
   var tempx=x;
   var y = 500;
@@ -269,7 +269,7 @@ class Tile{
 class Grid {
   var x, y;
   var rows, cols;
-  var Tile[][] tGrid;
+  var tGrid;
   var size;
   var curRow, curCol;
 
