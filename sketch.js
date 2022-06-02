@@ -54,7 +54,7 @@ function clockFace(){
   var num = 0;
   var nangle = 0;
   background(0,200,0);
-  fill(#C9ED54);
+  fill(C9ED54);
   circle(width/2,height/2,r);
   fill(0);
   textSize(20);
