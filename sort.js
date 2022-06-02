@@ -54,7 +54,7 @@ function swap(arr, i0, i1) {
 }//swap
 
 function randomArray(num) {
-  var values = new var[num];
+  var values = new Array(num);
 
   for (var i=0; i<values.length; i++) {
     values[i] = int(random(100, 400));
