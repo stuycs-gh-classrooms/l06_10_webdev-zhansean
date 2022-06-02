@@ -1,4 +1,4 @@
-var arr[];
+var arr = {};
 var ARRSIZE = 400;
 
 function setup() {
