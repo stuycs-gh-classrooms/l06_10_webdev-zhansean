@@ -76,13 +76,13 @@ function updateTime(){
   hourCount = hour();
 }
 
-var newX(amplitude, offset, t){
+function newX(amplitude, offset, t){
   var x = cos(radians(t));
   x = x*amplitude + offset;
   return x;
 }
 
-var newY(amplitude, offset, t){
+function newY(amplitude, offset, t){
   var y = sin(radians(t));
   y = y*amplitude + offset;
   return y;
