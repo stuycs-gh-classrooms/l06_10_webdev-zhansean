@@ -179,7 +179,7 @@ class Keyboard {
   }
 
   function colorUpdate() {    
-    Array<Character> uncheckedLetters = new Array<Character>();
+    var Array<Character> uncheckedLetters = new Array<Character>();
     for (var i=0; i<5; i++) {
       uncheckedLetters.add(submission.charAt(i));
     }    
@@ -311,7 +311,7 @@ class Grid {
   }
 
   function colorUpdate() {
-    Array<Character> possibleLetters = new Array<Character>();
+    var Array<Character> possibleLetters = new Array<Character>();
     for (var i=0; i<5; i++) {
       possibleLetters.add(target.charAt(i));
     }
