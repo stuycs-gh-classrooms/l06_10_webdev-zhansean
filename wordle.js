@@ -18,7 +18,7 @@ var submission = "";
 
 function setup() {
   background(0x434242);
-  size(500, 700);
+  createCanvas(500, 700);
 
   grid = new Grid(width/2-145, 100, 50, 6, 5);
   keyboard = new Keyboard();
