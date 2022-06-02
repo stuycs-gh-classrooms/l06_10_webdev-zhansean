@@ -121,9 +121,7 @@ class Ktile{
 }
 
 class Keyboard {
-  var Ktile[] kb1;
-  var Ktile[] kb2;
-  var Ktile[] kb3;
+  var Ktile[] kb1, kb2, kb3;
   var x = 75;
   var tempx=x;
   var y = 500;
